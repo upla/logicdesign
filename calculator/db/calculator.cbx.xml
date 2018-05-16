@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="calculator">
+		<CBX_INST_ENTRY INSTANCE_NAME="|calculator|compute:comb_5|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_rcm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|calculator|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_vcm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|calculator|compute:comb_5|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_07h.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|calculator|compute:comb_5|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_17h.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|calculator|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_25m.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

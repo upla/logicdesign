@@ -1,0 +1,27 @@
+module calculator(
+		input num1_1,
+		input num1_2,
+		input num1_3,
+		input num2_1,
+		input num2_2,
+		input num2_3,
+		input oper1,
+		input oper2,
+		input oper3,
+		input oper4
+	);
+	
+	always begin
+		
+	end
+	
+endmodule
+
+module getNum(
+		input bit1,
+		input bit2.
+		input bit3,
+		output result
+	);
+	
+endmodule

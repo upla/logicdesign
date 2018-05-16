@@ -1,0 +1,359 @@
+|calculator
+num1_1 => num1_1.IN1
+num1_2 => num1_2.IN1
+num1_3 => num1_3.IN1
+num2_1 => num2_1.IN1
+num2_2 => num2_2.IN1
+num2_3 => num2_3.IN1
+add => add.IN1
+sub => sub.IN1
+multi => multi.IN1
+div => div.IN1
+hex1_0 <= print3BitNum:comb_10.port1
+hex1_1 <= print3BitNum:comb_10.port2
+hex1_2 <= print3BitNum:comb_10.port3
+hex1_3 <= print3BitNum:comb_10.port4
+hex1_4 <= print3BitNum:comb_10.port5
+hex1_5 <= print3BitNum:comb_10.port6
+hex1_6 <= print3BitNum:comb_10.port7
+hex2_0 <= print3BitNum:comb_11.port1
+hex2_1 <= print3BitNum:comb_11.port2
+hex2_2 <= print3BitNum:comb_11.port3
+hex2_3 <= print3BitNum:comb_11.port4
+hex2_4 <= print3BitNum:comb_11.port5
+hex2_5 <= print3BitNum:comb_11.port6
+hex2_6 <= print3BitNum:comb_11.port7
+hex3_0 <= print5BitNum10:comb_12.port1
+hex3_1 <= print5BitNum10:comb_12.port2
+hex3_2 <= print5BitNum10:comb_12.port3
+hex3_3 <= print5BitNum10:comb_12.port4
+hex3_4 <= print5BitNum10:comb_12.port5
+hex3_5 <= print5BitNum10:comb_12.port6
+hex3_6 <= print5BitNum10:comb_12.port7
+hex4_0 <= print5BitNum:comb_14.port1
+hex4_1 <= print5BitNum:comb_14.port2
+hex4_2 <= print5BitNum:comb_14.port3
+hex4_3 <= print5BitNum:comb_14.port4
+hex4_4 <= print5BitNum:comb_14.port5
+hex4_5 <= print5BitNum:comb_14.port6
+hex4_6 <= print5BitNum:comb_14.port7
+uHex1_0 <= printNull:comb_6.port0
+uHex1_1 <= printNull:comb_6.port1
+uHex1_2 <= printNull:comb_6.port2
+uHex1_3 <= printNull:comb_6.port3
+uHex1_4 <= printNull:comb_6.port4
+uHex1_5 <= printNull:comb_6.port5
+uHex1_6 <= printNull:comb_6.port6
+uHex2_0 <= printNull:comb_7.port0
+uHex2_1 <= printNull:comb_7.port1
+uHex2_2 <= printNull:comb_7.port2
+uHex2_3 <= printNull:comb_7.port3
+uHex2_4 <= printNull:comb_7.port4
+uHex2_5 <= printNull:comb_7.port5
+uHex2_6 <= printNull:comb_7.port6
+uHex3_0 <= printNull:comb_8.port0
+uHex3_1 <= printNull:comb_8.port1
+uHex3_2 <= printNull:comb_8.port2
+uHex3_3 <= printNull:comb_8.port3
+uHex3_4 <= printNull:comb_8.port4
+uHex3_5 <= printNull:comb_8.port5
+uHex3_6 <= printNull:comb_8.port6
+uHex4_0 <= printNull:comb_9.port0
+uHex4_1 <= printNull:comb_9.port1
+uHex4_2 <= printNull:comb_9.port2
+uHex4_3 <= printNull:comb_9.port3
+uHex4_4 <= printNull:comb_9.port4
+uHex4_5 <= printNull:comb_9.port5
+uHex4_6 <= printNull:comb_9.port6
+
+
+|calculator|getNum:comb_3
+bit1 => num[2].DATAIN
+bit2 => num[1].DATAIN
+bit3 => num[0].DATAIN
+num[0] <= bit3.DB_MAX_OUTPUT_PORT_TYPE
+num[1] <= bit2.DB_MAX_OUTPUT_PORT_TYPE
+num[2] <= bit1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculator|getNum:comb_4
+bit1 => num[2].DATAIN
+bit2 => num[1].DATAIN
+bit3 => num[0].DATAIN
+num[0] <= bit3.DB_MAX_OUTPUT_PORT_TYPE
+num[1] <= bit2.DB_MAX_OUTPUT_PORT_TYPE
+num[2] <= bit1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculator|compute:comb_5
+num1[0] => Add3.IN3
+num1[0] => Equal2.IN2
+num1[0] => LessThan0.IN3
+num1[0] => Add4.IN6
+num1[0] => Mult0.IN2
+num1[0] => Div0.IN2
+num1[0] => Add7.IN64
+num1[1] => Add3.IN2
+num1[1] => Equal2.IN1
+num1[1] => LessThan0.IN2
+num1[1] => Add4.IN5
+num1[1] => Mult0.IN1
+num1[1] => Div0.IN1
+num1[1] => Add7.IN63
+num1[2] => Add3.IN1
+num1[2] => Equal2.IN0
+num1[2] => LessThan0.IN1
+num1[2] => Add4.IN4
+num1[2] => Mult0.IN0
+num1[2] => Div0.IN0
+num1[2] => Add7.IN62
+num2[0] => Add3.IN6
+num2[0] => Equal2.IN5
+num2[0] => LessThan0.IN6
+num2[0] => Add6.IN64
+num2[0] => Mult0.IN5
+num2[0] => Div0.IN5
+num2[0] => Add4.IN3
+num2[0] => Equal3.IN31
+num2[1] => Add3.IN5
+num2[1] => Equal2.IN4
+num2[1] => LessThan0.IN5
+num2[1] => Add6.IN63
+num2[1] => Mult0.IN4
+num2[1] => Div0.IN4
+num2[1] => Add4.IN2
+num2[1] => Equal3.IN30
+num2[2] => Add3.IN4
+num2[2] => Equal2.IN3
+num2[2] => LessThan0.IN4
+num2[2] => Add6.IN62
+num2[2] => Mult0.IN3
+num2[2] => Div0.IN3
+num2[2] => Add4.IN1
+num2[2] => Equal3.IN29
+add => Add0.IN1
+add => tmp[0].OUTPUTSELECT
+add => tmp[1].OUTPUTSELECT
+add => tmp[2].OUTPUTSELECT
+add => tmp[3].OUTPUTSELECT
+add => tmp[3].IN1
+add => tmp[5].IN1
+sub => Add0.IN2
+sub => tmp[0].OUTPUTSELECT
+sub => tmp[1].OUTPUTSELECT
+sub => tmp[2].OUTPUTSELECT
+sub => tmp[3].OUTPUTSELECT
+sub => tmp[4].OUTPUTSELECT
+sub => tmp[5].OUTPUTSELECT
+sub => tmp[5].IN1
+multi => Add1.IN4
+multi => tmp[0].OUTPUTSELECT
+multi => tmp[1].OUTPUTSELECT
+multi => tmp[2].OUTPUTSELECT
+multi => tmp[3].OUTPUTSELECT
+multi => tmp[4].OUTPUTSELECT
+multi => tmp[5].OUTPUTSELECT
+multi => tmp[5].IN0
+div => Add2.IN6
+div => tmp[5].IN1
+result[0] <= tmp[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= tmp[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= tmp[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= tmp[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= tmp[4].DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= tmp[5].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculator|printNull:comb_6
+zero <= <VCC>
+one <= <VCC>
+two <= <VCC>
+three <= <VCC>
+four <= <VCC>
+five <= <VCC>
+six <= <VCC>
+
+
+|calculator|printNull:comb_7
+zero <= <VCC>
+one <= <VCC>
+two <= <VCC>
+three <= <VCC>
+four <= <VCC>
+five <= <VCC>
+six <= <VCC>
+
+
+|calculator|printNull:comb_8
+zero <= <VCC>
+one <= <VCC>
+two <= <VCC>
+three <= <VCC>
+four <= <VCC>
+five <= <VCC>
+six <= <VCC>
+
+
+|calculator|printNull:comb_9
+zero <= <VCC>
+one <= <VCC>
+two <= <VCC>
+three <= <VCC>
+four <= <VCC>
+five <= <VCC>
+six <= <VCC>
+
+
+|calculator|print3BitNum:comb_10
+num[0] => zero.IN0
+num[0] => one.IN0
+num[0] => two.IN0
+num[0] => three.IN0
+num[0] => zero.IN0
+num[0] => one.IN0
+num[0] => three.IN0
+num[0] => five.IN0
+num[1] => zero.IN1
+num[1] => one.IN1
+num[1] => three.IN1
+num[1] => three.IN0
+num[1] => one.IN1
+num[1] => two.IN1
+num[1] => three.IN1
+num[1] => five.IN0
+num[2] => zero.IN1
+num[2] => two.IN1
+num[2] => three.IN1
+num[2] => five.IN1
+num[2] => five.IN1
+num[2] => zero.IN1
+num[2] => one.IN1
+num[2] => three.IN1
+zero <= zero.DB_MAX_OUTPUT_PORT_TYPE
+one <= one.DB_MAX_OUTPUT_PORT_TYPE
+two <= two.DB_MAX_OUTPUT_PORT_TYPE
+three <= three.DB_MAX_OUTPUT_PORT_TYPE
+four <= three.DB_MAX_OUTPUT_PORT_TYPE
+five <= five.DB_MAX_OUTPUT_PORT_TYPE
+six <= six.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculator|print3BitNum:comb_11
+num[0] => zero.IN0
+num[0] => one.IN0
+num[0] => two.IN0
+num[0] => three.IN0
+num[0] => zero.IN0
+num[0] => one.IN0
+num[0] => three.IN0
+num[0] => five.IN0
+num[1] => zero.IN1
+num[1] => one.IN1
+num[1] => three.IN1
+num[1] => three.IN0
+num[1] => one.IN1
+num[1] => two.IN1
+num[1] => three.IN1
+num[1] => five.IN0
+num[2] => zero.IN1
+num[2] => two.IN1
+num[2] => three.IN1
+num[2] => five.IN1
+num[2] => five.IN1
+num[2] => zero.IN1
+num[2] => one.IN1
+num[2] => three.IN1
+zero <= zero.DB_MAX_OUTPUT_PORT_TYPE
+one <= one.DB_MAX_OUTPUT_PORT_TYPE
+two <= two.DB_MAX_OUTPUT_PORT_TYPE
+three <= three.DB_MAX_OUTPUT_PORT_TYPE
+four <= three.DB_MAX_OUTPUT_PORT_TYPE
+five <= five.DB_MAX_OUTPUT_PORT_TYPE
+six <= six.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculator|print5BitNum10:comb_12
+num[0] => one.IN0
+num[0] => zero.IN0
+num[0] => two.IN0
+num[0] => three.IN0
+num[1] => zero.IN0
+num[1] => one.IN1
+num[1] => three.IN1
+num[1] => three.IN0
+num[1] => zero.IN0
+num[1] => zero.IN1
+num[1] => six.IN0
+num[2] => two.IN1
+num[2] => six.IN1
+num[2] => zero.IN1
+num[2] => zero.IN1
+num[2] => one.IN0
+num[2] => three.IN1
+num[3] => zero.IN1
+num[3] => zero.IN1
+num[3] => one.IN1
+num[3] => one.IN1
+num[3] => one.IN1
+num[3] => two.IN1
+num[3] => three.IN1
+num[3] => three.IN1
+num[3] => six.IN1
+num[4] => ~NO_FANOUT~
+zero <= zero.DB_MAX_OUTPUT_PORT_TYPE
+one <= one.DB_MAX_OUTPUT_PORT_TYPE
+two <= two.DB_MAX_OUTPUT_PORT_TYPE
+three <= three.DB_MAX_OUTPUT_PORT_TYPE
+four <= three.DB_MAX_OUTPUT_PORT_TYPE
+five <= five.DB_MAX_OUTPUT_PORT_TYPE
+six <= six.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculator|print5BitNum:comb_14
+num[0] => zero.IN0
+num[0] => one.IN0
+num[0] => two.IN0
+num[0] => three.IN0
+num[0] => zero.IN0
+num[0] => three.IN0
+num[0] => five.IN0
+num[1] => zero.IN0
+num[1] => one.IN1
+num[1] => three.IN1
+num[1] => three.IN0
+num[1] => zero.IN0
+num[1] => zero.IN1
+num[1] => three.IN1
+num[1] => five.IN0
+num[2] => zero.IN1
+num[2] => two.IN0
+num[2] => three.IN1
+num[2] => five.IN1
+num[2] => five.IN1
+num[2] => zero.IN1
+num[2] => zero.IN1
+num[2] => one.IN0
+num[2] => three.IN1
+num[3] => zero.IN1
+num[3] => zero.IN1
+num[3] => zero.IN1
+num[3] => one.IN1
+num[3] => one.IN1
+num[3] => one.IN1
+num[3] => two.IN1
+num[3] => two.IN1
+num[3] => three.IN1
+num[3] => three.IN1
+num[3] => three.IN1
+num[3] => five.IN1
+num[3] => five.IN1
+num[4] => ~NO_FANOUT~
+zero <= zero.DB_MAX_OUTPUT_PORT_TYPE
+one <= one.DB_MAX_OUTPUT_PORT_TYPE
+two <= two.DB_MAX_OUTPUT_PORT_TYPE
+three <= three.DB_MAX_OUTPUT_PORT_TYPE
+four <= three.DB_MAX_OUTPUT_PORT_TYPE
+five <= five.DB_MAX_OUTPUT_PORT_TYPE
+six <= six.DB_MAX_OUTPUT_PORT_TYPE
+
+
